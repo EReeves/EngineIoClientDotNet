@@ -133,16 +133,6 @@ namespace Quobject.EngineIoClientDotNet.Parser
                 type = -1;
             }
 
-            try
-            {
-                data = UTF8.Decode(data);
-            }
-            catch (Exception)
-            {
-
-                return _err;
-            }
-
             if (type < 0 || type >= _packetsList.Count)
             {
                 return _err;
